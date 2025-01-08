@@ -1,0 +1,130 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 2%;
+    position: absolute;
+    z-index: 1;
+    background-color: transparent;
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 2px; 
+    opacity: 1; 
+}
+
+.navbar * {
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.navbar *:not(:has(*)) {
+    opacity: 0.85; /* Apply opacity only to the deepest child elements */
+}
+
+.navbar *:hover {
+    opacity: 1; /* Full opacity on hover for any element */
+}
+.home-page:hover .logo,
+.home-page:hover p {
+    opacity: 1; /* Full opacity when the parent is hovered */
+}
+
+.nav-dropdown:hover p,
+.nav-dropdown:hover img {
+    opacity: 1;
+}
+
+.home-page {
+    display: flex;
+    font-size: 28px;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.home-page p {
+    letter-spacing: 3.5px;
+}
+
+.logo {
+    width: 36px;
+    width: 36px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 75px;
+}
+
+.navbar-left ul {
+    display: flex;
+    list-style-type: none;
+    gap: 50px;
+    font-size: 20px;
+    position: relative;
+}
+
+.navbar-left ul li {
+    cursor: pointer;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.play-free {
+    display: flex;
+    align-items: center;
+    border: 3.5px solid rgba(162, 161, 161, 0.5);
+    border-radius: 5px;
+    padding: 12px 24px;
+    gap: 12px;
+    font-size: 20px;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.irina {
+    width: 20px;
+    height: 20px;
+}
+
+.play-free:hover {
+    border-color: rgb(255, 60, 0);
+    transform: translateY(-2px);
+}
+
+.nav-dropdown {
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    transition: background-color 0.2s;
+    /* border: 1.5px solid white; */
+    /* padding: 8px; */
+    /* position: relative; */
+}
+
+.caret {
+    width: 16px;
+    height: 16px;
+}
+
+.nav-dropdown-patches {
+    position: absolute;
+    top: 28px;
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    left: -2px;
+    display: none;
+}
+
+.nav-dropdown:hover {
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: gray;
+}
+
+.nav-dropdown:hover .nav-dropdown-patches{
+    display: block;
+}
