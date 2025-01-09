@@ -100,9 +100,11 @@
     position: relative;
     box-sizing: border-box;
     transition: background-color 0.2s;
-    /* border: 1.5px solid white; */
-    /* padding: 8px; */
-    /* position: relative; */
+    border: 2px solid transparent;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 16px;
+    margin: -18px;  
 }
 
 .caret {
@@ -112,19 +114,35 @@
 
 .nav-dropdown-patches {
     position: absolute;
-    top: 28px;
+    top: 60px;
     border: 2px solid rgba(255, 255, 255, 0.75);
     left: -2px;
     display: none;
+    font-size: 12px;
+    font-weight: 400;
+    /* width: 255px; */
+    padding: 8px 8px;
+
+}
+
+.nav-dropdown-patches p {
+    white-space: nowrap;
+    transition: transform 0.2s;
+}
+
+.nav-dropdown-patches p:hover{
+    transform: translateX(6px);
+}
+
+.nav-dropdown-patches p:first-child {
+    margin-bottom: 8px;
 }
 
 .nav-dropdown:hover {
-    border: 2px solid rgba(255, 255, 255, 0.75);
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    background-color: gray;
+    border-color:rgba(255, 255, 255, 0.75);
+    background-color: rgba(128, 128, 128, 0.5);
 }
 
 .nav-dropdown:hover .nav-dropdown-patches{
-    display: block;
+    display: inline-block;
 }
