@@ -81,7 +81,7 @@
     padding: 12px 24px;
     gap: 12px;
     font-size: 20px;
-    transition: border-color 0.2s, transform 0.2s;
+    transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .irina {
@@ -99,7 +99,7 @@
     align-items: center;
     position: relative;
     box-sizing: border-box;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
     border: 2px solid transparent;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -114,15 +114,16 @@
 
 .nav-dropdown-patches {
     position: absolute;
-    top: 60px;
-    border: 2px solid rgba(255, 255, 255, 0.75);
+    top: 59.1px;
+    border: 2px solid rgba(255, 255, 255);
     left: -2px;
-    display: none;
     font-size: 12px;
     font-weight: 400;
-    /* width: 255px; */
     padding: 8px 8px;
-
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    background-color: rgba(128, 128, 128, 0.5);
 }
 
 .nav-dropdown-patches p {
@@ -139,10 +140,11 @@
 }
 
 .nav-dropdown:hover {
-    border-color:rgba(255, 255, 255, 0.75);
+    border-color:rgba(255, 255, 255);
     background-color: rgba(128, 128, 128, 0.5);
 }
 
 .nav-dropdown:hover .nav-dropdown-patches{
-    display: inline-block;
+    opacity: 1;
+    visibility: visible;
 }
