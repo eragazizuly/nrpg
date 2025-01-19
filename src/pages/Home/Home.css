@@ -13,7 +13,7 @@ h1 {
 }
 
 .first-block {
-    height: 70vh;
+    height: 67vh;
     overflow: hidden;
     position: relative;
 }
@@ -75,23 +75,46 @@ hr {
     align-items: center;
     border: 3.5px solid rgba(162, 161, 161, 0.5);
     border-radius: 5px;
-    padding: 12px 24px;
+    padding: 12px;
     gap: 12px;
-    font-size: 20px;
-    transition: border-color 0.2s ease, transform 0.2s ease;
+    transition: transform 0.2s ease;
     box-shadow: 2px 2px 2px black;
     width: fit-content;
+    cursor: pointer;
+}
+
+.play-free2:hover {
+    transform: translateY(-3px);
+}
+
+.play-free2-text h2 {
+    font-size: 26px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
 }
 
 .play-free2-text p {
     margin: 0;
     padding: 0;
     color: grey;
+    font-size: 16px;
+}
 
+
+
+.play-free2-text p, h2 {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 
 .irina {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+.second-block {
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-evenly;
 }
